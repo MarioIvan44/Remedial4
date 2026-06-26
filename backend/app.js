@@ -1,5 +1,7 @@
 //Importar express
 import express from 'express';
+import appointmentsRoutes from './routes/appointments.js';
+import usersRoutes from './routes/users.js';
 
 import cors from 'cors'; 
 //Importante 
@@ -23,5 +25,7 @@ app.use(express.json());
 
 
 //Creamos los endpoints
+app.use("/api/appointments", appointmentsRoutes);
+app.use("/api/users", usersRoutes);
 
 export default app;
